@@ -1,0 +1,158 @@
+{
+ "pass_up": 0.85,
+ "pass_down": 0.35,
+ "lag_up": 1,
+ "lag_down": 4,
+ "indexation": 0.15,
+ "growth": 0.04,
+ "ecm_speed": 0.03,
+ "demand_ar1": 0.25,
+ "demand_sd": 0.2,
+ "demand_fx_rho": -0.25,
+ "recv_weights": [
+  0.06,
+  0.22,
+  0.3,
+  0.2,
+  0.12,
+  0.07,
+  0.03
+ ],
+ "landing_pct": 13.5,
+ "transfer_fee_pct": 1.2,
+ "shrink_pct_week": 0.05,
+ "storage_pct_week": 0.15,
+ "deposit_rate_pct": 20.0,
+ "borrow_rate_pct": 38.0,
+ "fx_premium_mean": 0.07,
+ "lead_weeks_mean": 5.0,
+ "lead_weeks_sd": 0.9,
+ "robusta_beta": 0.6,
+ "opex_pct_of_revenue": 0.075,
+ "demand_cv_total": 0.17316220151368064,
+ "demand_fx_rho_total": -0.29361311016380953,
+ "markup_realized_last52_pct": 49.9445276789271,
+ "products": [
+  "washed",
+  "natural",
+  "robusta",
+  "specialty"
+ ],
+ "elasticity": {
+  "washed": 0.6,
+  "natural": 0.5,
+  "robusta": 0.9,
+  "specialty": 0.3
+ },
+ "elasticity_weighted": 0.5996763939245726,
+ "seasonal_index": [
+  1.0454777903385444,
+  1.0629089952702464,
+  1.0792674789346122,
+  1.094314697803718,
+  1.1078312295430661,
+  1.1196199726833185,
+  1.129509020803552,
+  1.1373541693139773,
+  1.2815493896686596,
+  1.284995012033786,
+  1.2861491628614914,
+  1.284995012033786,
+  1.143041018283576,
+  1.1373541693139773,
+  1.129509020803552,
+  1.1196199726833185,
+  1.1078312295430661,
+  1.094314697803718,
+  1.0792674789346122,
+  1.0629089952702464,
+  1.0454777903385444,
+  1.0272280503590654,
+  1.0084258976355458,
+  0.989345509893455,
+  0.9702651221513643,
+  0.9514629694278447,
+  0.9332132294483657,
+  0.9157820245166637,
+  0.899423540852298,
+  0.8843763219831922,
+  0.870859790243844,
+  0.8590710471035916,
+  0.8491819989833579,
+  0.8413368504729328,
+  0.8356500015033341,
+  0.8322043791382074,
+  0.8310502283105021,
+  0.8322043791382074,
+  0.8356500015033341,
+  0.8413368504729328,
+  0.8491819989833579,
+  0.8590710471035916,
+  0.8708597902438439,
+  0.8843763219831922,
+  0.8994235408522979,
+  0.9157820245166636,
+  0.9332132294483656,
+  0.9514629694278446,
+  0.9702651221513642,
+  0.989345509893455,
+  1.0084258976355458,
+  1.0272280503590654
+ ],
+ "demand_cv_per_product": 0.20201676710706024,
+ "fx_basis_factor_last104": 1.1059456044716678,
+ "weekly_demand_last13_kg": 36006.450805845365,
+ "weekly_demand_deseason_last13_kg": 38861.930780054114,
+ "recv_mean_lag_weeks": 2.43,
+ "inflation_last52_pct": 52.08373373195161,
+ "lead_median_weeks": 5.0,
+ "crisis_windows": [
+  [
+   "2022-11-04",
+   "2022-12-16"
+  ],
+  [
+   "2024-04-19",
+   "2024-05-31"
+  ],
+  [
+   "2025-09-05",
+   "2025-10-17"
+  ]
+ ],
+ "n_weeks": 255,
+ "start": "2021-10-08",
+ "end": "2026-08-21",
+ "injected_issues": [
+  {
+   "table": "sales_weekly",
+   "type": "missing",
+   "week_end": "2022-07-08",
+   "product": "robusta"
+  },
+  {
+   "table": "sales_weekly",
+   "type": "missing",
+   "week_end": "2022-09-02",
+   "product": "robusta"
+  },
+  {
+   "table": "sales_weekly",
+   "type": "duplicate_row",
+   "week_end": "2023-01-06",
+   "product": "specialty"
+  },
+  {
+   "table": "sales_weekly",
+   "type": "outlier_x10",
+   "week_end": "2024-01-26",
+   "product": "washed"
+  },
+  {
+   "table": "purchases",
+   "type": "bad_entry_fx_zero",
+   "shipment_id": "SH0335"
+  }
+ ],
+ "description": "SYNTHETIC company; market series for arabica and USD/IRR are real, all company data and other bean prices are generated."
+}

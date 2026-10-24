@@ -1,0 +1,25 @@
+# Publishes the static (server-less) demo to GitHub Pages on every push to main.
+# Needs: repo Settings -> Pages -> Source = "GitHub Actions". No Python is run here: the results are pre-computed
+# (apps/web-react/public/static-data, regenerate with `python scripts/build_static.py`).
+# NOTE: do not use "Re-run jobs" after a failure (the old run keeps its artifact -> "Multiple artifacts named github-pages").
+#       Push a new commit or use Actions -> pages -> "Run workflow" to get a fresh run.
+name: pages
+on:
+  push: { branches: [main] }
+  workflow_dispatch:
+permissions: { contents: read, pages: write, id-token: write }
+concurrency: { group: pages, cancel-in-progress: true }
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 22, cache: npm, cache-dependency-path: apps/web-react/package-lock.json }
+      - run: npm ci && npm run build:static
+        working-directory: apps/web-react
+      - uses: actions/upload-pages-artifact@v4
+        with: { path: apps/web-react/dist-static }
+      - id: d
+        uses: actions/deploy-pages@v4

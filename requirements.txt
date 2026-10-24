@@ -1,0 +1,12 @@
+numpy
+scipy
+pandas
+statsmodels
+pydantic>=2
+openpyxl
+pyyaml
+jinja2
+fastapi
+uvicorn
+httpx
+pytest

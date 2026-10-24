@@ -1,0 +1,259 @@
+# generated from argan_engine.config.Scenario — edit values via the UI/API or Scenario(...)
+purchase_budget_usd:
+  default: 100000
+  unit: دلار
+  provenance: judgment
+  label_fa: ارزش خرید محموله
+purchase_qty_kg:
+  default: null
+  unit: کیلوگرم
+  provenance: judgment
+  label_fa: مقدار خرید (اختیاری)
+horizon_days:
+  default: 90
+  unit: روز
+  provenance: judgment
+  label_fa: افق تصمیم
+lead_time_days:
+  default: 14
+  unit: روز
+  provenance: placeholder
+  label_fa: زمان تحویل (سفارش تا انبار)
+schedule_days:
+  default:
+  - 0
+  - 30
+  - 60
+  unit: روز
+  provenance: judgment
+  label_fa: روزهای ممکن برای سفارش
+grid_step:
+  default: 0.1
+  unit: ''
+  provenance: judgment
+  label_fa: گام شبکه وزن‌ها
+initial_inventory_kg:
+  default: 3000
+  unit: کیلوگرم
+  provenance: placeholder
+  label_fa: موجودی فعلی انبار
+weekly_demand_kg:
+  default: 1000
+  unit: کیلوگرم
+  provenance: placeholder
+  label_fa: میانگین فروش هفتگی
+demand_cv:
+  default: 0.25
+  unit: ''
+  provenance: placeholder
+  label_fa: ضریب تغییرات تقاضای هفتگی
+demand_price_elasticity:
+  default: 0.3
+  unit: ''
+  provenance: judgment
+  label_fa: کشش قیمتی تقاضا
+demand_fx_rho:
+  default: -0.2
+  unit: ''
+  provenance: judgment
+  label_fa: هم‌بستگی شوک تقاضا با شوک ارز
+landing_cost_pct:
+  default: 15.0
+  unit: '% ارزش کالا'
+  provenance: placeholder
+  label_fa: هزینه حمل، بیمه، گمرک
+storage_cost_pct_week:
+  default: 0.15
+  unit: '% ارزش موجودی در هفته'
+  provenance: placeholder
+  label_fa: هزینه انبارداری
+shrink_pct_week:
+  default: 0.05
+  unit: '% در هفته'
+  provenance: placeholder
+  label_fa: افت کیفی/وزنی
+terminal_haircut_pct:
+  default: 0.0
+  unit: '%'
+  provenance: judgment
+  label_fa: کسر ارزش موجودی پایان افق
+target_markup_pct:
+  default: 30.0
+  unit: '%'
+  provenance: placeholder
+  label_fa: حاشیه سود روی بهای جایگزینی
+pass_through_up:
+  default: 0.85
+  unit: ''
+  provenance: judgment
+  label_fa: انتقال افزایش هزینه به قیمت فروش
+pass_through_down:
+  default: 0.4
+  unit: ''
+  provenance: judgment
+  label_fa: انتقال کاهش هزینه به قیمت فروش
+lag_up_weeks:
+  default: 1
+  unit: هفته
+  provenance: judgment
+  label_fa: تأخیر انتقال افزایش
+price_indexation:
+  default: 0.0
+  unit: ''
+  provenance: judgment
+  label_fa: پیروی قیمت فروش از تورم عمومی (علاوه بر هزینه)
+lag_down_weeks:
+  default: 4
+  unit: هفته
+  provenance: judgment
+  label_fa: تأخیر انتقال کاهش
+initial_cash_bn_irr:
+  default: 360.0
+  unit: میلیارد ریال
+  provenance: placeholder
+  label_fa: نقدینگی در دسترس
+min_cash_bn_irr:
+  default: 50.0
+  unit: میلیارد ریال
+  provenance: judgment
+  label_fa: حداقل نقدینگی ایمن
+weekly_opex_bn_irr:
+  default: 10.0
+  unit: میلیارد ریال
+  provenance: placeholder
+  label_fa: هزینه جاری هفتگی (حقوق، اجاره، …)
+receivable_lag_weeks:
+  default: 2
+  unit: هفته
+  provenance: placeholder
+  label_fa: تأخیر وصول مطالبات
+deposit_rate_pct:
+  default: 25.0
+  unit: '% سالانه'
+  provenance: placeholder
+  label_fa: نرخ سود سپرده (بازده نقد مازاد)
+borrow_rate_pct:
+  default: 40.0
+  unit: '% سالانه'
+  provenance: placeholder
+  label_fa: نرخ تأمین مالی/اضافه‌برداشت
+inflation_pct:
+  default: 60.0
+  unit: '% سالانه'
+  provenance: placeholder
+  label_fa: تورم سالانه منطقه فعالیت
+region_label:
+  default: ''
+  unit: ''
+  provenance: judgment
+  label_fa: نام منطقه (برچسب گزارش)
+fx_model:
+  default: auto
+  unit: ''
+  provenance: data
+  label_fa: مدل نرخ ارز
+fx_drift_annual_pct:
+  default: null
+  unit: '% لگاریتمی سالانه'
+  provenance: data
+  label_fa: روند سالانه دلار (دستی)
+fx_vol_mult:
+  default: 1.0
+  unit: ''
+  provenance: judgment
+  label_fa: ضریب نوسان ارز
+coffee_vol_mult:
+  default: 1.0
+  unit: ''
+  provenance: judgment
+  label_fa: ضریب نوسان قهوه
+corr_coffee_fx:
+  default: null
+  unit: ''
+  provenance: data
+  label_fa: هم‌بستگی قهوه–ارز
+event_p_escalation:
+  default: 0.0
+  unit: '%'
+  provenance: judgment
+  label_fa: احتمال تشدید تنش (جهش اضافه به بالا) در افق
+event_p_deal:
+  default: 0.0
+  unit: '%'
+  provenance: judgment
+  label_fa: احتمال کاهش تنش/توافق (جهش اضافه به پایین) در افق
+coffee_spot_c_lb:
+  default: null
+  unit: سنت بر پوند
+  provenance: data
+  label_fa: قیمت امروز آرابیکا (اختیاری)
+coffee_differential_usd_kg:
+  default: 0.0
+  unit: دلار بر کیلو
+  provenance: placeholder
+  label_fa: پریمیوم/دیفرانسیل نسبت به آرابیکای نیویورک
+fx_spot_irr:
+  default: null
+  unit: ریال
+  provenance: data
+  label_fa: نرخ دلار امروز (اختیاری)
+fx_basis_factor:
+  default: 1.0
+  unit: ''
+  provenance: placeholder
+  label_fa: ضریب نرخ مؤثر واردات نسبت به بازار آزاد
+cvar_alpha:
+  default: 0.95
+  unit: ''
+  provenance: judgment
+  label_fa: سطح اطمینان CVaR
+risk_lambda:
+  default: 0.3
+  unit: ''
+  provenance: judgment
+  label_fa: وزن ریسک در هدف (0 = فقط میانگین، 1 = فقط بدترین دنباله)
+risk_appetite:
+  default: balanced
+  unit: ''
+  provenance: judgment
+  label_fa: اشتهای ریسک
+max_liquidity_breach_prob_pct:
+  default: 10.0
+  unit: '%'
+  provenance: judgment
+  label_fa: حداکثر احتمال افت نقدینگی زیر حد ایمن
+max_unmet_demand_pct:
+  default: 5.0
+  unit: '%'
+  provenance: judgment
+  label_fa: حداکثر کمبود مورد انتظار (از کل تقاضا)
+n_paths:
+  default: 6000
+  unit: ''
+  provenance: judgment
+  label_fa: تعداد مسیر مونت‌کارلو
+robust:
+  default: true
+  unit: ''
+  provenance: judgment
+  label_fa: تحلیل استحکام (جهان‌های ممکن)
+n_worlds:
+  default: 40
+  unit: ''
+  provenance: judgment
+  label_fa: تعداد جهان‌های ممکن
+paths_per_world:
+  default: 1200
+  unit: ''
+  provenance: judgment
+  label_fa: مسیر در هر جهان
+flip_analysis:
+  default: true
+  unit: ''
+  provenance: judgment
+  label_fa: منحنی «چه چیزی تصمیم را عوض می‌کند»
+seed:
+  default: 20261020
+  unit: ''
+  provenance: judgment
+  label_fa: بذر تصادفی

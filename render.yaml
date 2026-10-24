@@ -1,0 +1,7 @@
+# Optional live hosting on Render (free plan sleeps after ~15 min idle; first request then takes ~1 min).
+services:
+  - type: web
+    name: argan-risk-lab
+    runtime: docker
+    plan: free
+    healthCheckPath: /health

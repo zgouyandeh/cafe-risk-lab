@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "argan-engine"
+version = "0.1.0"
+description = "Quantitative risk & decision engine for green-coffee procurement under FX and price uncertainty"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "pandas>=2.1", "statsmodels>=0.14", "pydantic>=2.5",
+                "openpyxl>=3.1", "pyyaml>=6", "jinja2>=3.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
