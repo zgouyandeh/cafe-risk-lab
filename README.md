@@ -23,14 +23,6 @@
 | نمونه گزارش برای شرکت ساختگی | `https://zgouyandeh.github.io/cafe-risk-lab/static-data/reports/company.html` |
 | روش‌شناسی کامل به‌همراه منابع | [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) |
 
-برای جایگزینی خودکار نام کاربری و نام مخزن، دستور زیر را در پوشه اصلی پروژه اجرا کنید:
-
-```bash
-sed -i 's/zgouyandeh/نام-کاربری-شما/g; s/cafe-risk-lab/نام-مخزن-شما/g' README.md
-```
-
-برای ذخیره گزارش به‌صورت PDF، صفحه گزارش را باز کنید، کلیدهای `Ctrl+P` را بزنید و گزینه `Save as PDF` را انتخاب کنید.
-
 ---
 
 ## ۱. مسئله کسب‌وکار
